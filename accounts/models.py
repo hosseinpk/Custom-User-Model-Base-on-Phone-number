@@ -1,5 +1,5 @@
 from django.db import models
-from accounts.usermanager import UserManager
+from accounts.manager import UserManager
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import(
     AbstractBaseUser,
