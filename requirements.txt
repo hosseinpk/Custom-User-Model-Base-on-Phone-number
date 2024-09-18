@@ -1,0 +1,11 @@
+pillow
+python-decouple
+djangorestframework
+djangorestframework-simplejwt
+markdown
+django-filter
+django==4.2
+drf-yasg[validation]
+black
+flake8
+setuptools
