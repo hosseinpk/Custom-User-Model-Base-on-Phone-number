@@ -5,16 +5,17 @@ from django.utils.translation import gettext as _
 
 class UserManager(BaseUserManager):
 
-    @staticmethod
-    def phone_validate(phone):
+    # @staticmethod
+    # def phone_validate(phone):
 
-        phone = str(phone).replace(" ", "")
-        if not re.match(r'^(\+98|0)?9\d{9}$', phone):
-            raise ValueError(_("Invalid phone number"))
-        return phone
+    #     phone = str(phone).replace(" ", "")
+    #     if not re.match(r'^(\+98|0)?9\d{9}$', phone):
+    #         raise ValueError(_("Invalid phone number"))
+    #     return phone
     
 
 
+    
     def create_user(self, phone, password, **extra_fields):
 
         if not phone:
@@ -22,7 +23,7 @@ class UserManager(BaseUserManager):
         
         
         
-        phone = self.phone_validate(phone)
+        # phone = self.phone_validate(phone)
         user = self.model(phone=phone, **extra_fields)
         user.set_password(password)
         user.save()
