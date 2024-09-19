@@ -16,13 +16,11 @@ class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
     list_display = (
         "phone",
-        
         "is_superuser",
         "is_staff",
     )
     list_filter = (
         "phone",
-        
         "is_superuser",
         "is_staff",
     )
@@ -65,7 +63,6 @@ class CustomUserAdmin(UserAdmin):
                     "password2",
                     "is_staff",
                     "is_superuser",
-                    
                 ),
             },
         ),
